@@ -16,7 +16,7 @@ WHERE U.IMA_ULOGA='glavna' AND B.STATUS='redovna' AND B.SCENA='golema';
 SELECT V, IMEV
 FROM ULOGI NATURAL JOIN VRABOTENI
 GROUP BY V, IMEV
-HAVING COUNT(*) >= (SELECT MAX(COUNT(*))
+HAVING COUNT(*) = (SELECT MAX(COUNT(*))
                     FROM ULOGI
                     GROUP BY V
                     );
