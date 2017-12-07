@@ -1,0 +1,17 @@
+t#	imet	grad
+9	MOT	Skopje
+10	Anton Panov	Strumica
+11	MNT	Skopje
+12	Dramski Teatar	Skopje
+13	Vojdan Cernodrinski	Prilep
+14	Teatar za deca i mladinci	Skopje
+15	Vasil Hadzimanov	Kavadarci
+16	Centar	Skopje
+17	Teatar levo kose	Skopje
+18	Jordan Hadzi-Konstantinov - Dzinot	Veles
+19	Aco Gjorcev	Negotino
+20	Naroden teatar	Bitola
+24	Grigor Prlicev	Ohrid
+28	Nase malo kabare	Tetovo
+30	Teatar na narodnostite	Skopje
+50	Kabare	Stip

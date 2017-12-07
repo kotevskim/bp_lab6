@@ -1,0 +1,14 @@
+p#	imep	status	scena
+23	Posleden let - komedija	vonredna	mala
+24	Samec - monodrama	gostuva	golema
+25	Kralot Kuskule II - komedija	premiera	golema
+26	Zivotot ne e son - drama	redovna	mala
+27	Samrak na Zapad - tragedija	gostuva	mala
+28	Ne go docekav Goddo - komedija	vonredna	kabare
+29	Bure Barut	redovna 	golema
+30	Princeza na zrno grashok		
+31	Makedonska prikazna		
+32	Lakomata Meca		
+34	Divo meso	premiera	
+43	Pepeleska od nase maalo		
+44	Naroden Pratenik	redovna	mala

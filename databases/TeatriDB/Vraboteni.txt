@@ -1,0 +1,15 @@
+v#	imev	profesija
+3255	Joana Popeska	akter
+3256	Jole Gorgieski	akter
+3257	Tana Mimeska	akter
+3259	Camin Aleksov	akter
+3361	Georgi Ljubevski	akter
+3363	Angel Kolevski	akter
+3364	Osman Dimitrievski	akter
+3377	Sasho Petkovski	blagajnik
+3600	Marika Drpkova	akter
+3700	Jelena Zugic	akter
+3800	Toso Nemov	akter
+3987	Tarek Islamov	akter
+3989	Katina Ivanova	akter
+5320	Vanco Petrusevski	akter

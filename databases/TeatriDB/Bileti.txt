@@ -1,0 +1,15 @@
+t#	p#	status	scena	cena	prodadeni
+15	23	redovna	mala	60	60
+11	23	vonredna	mala	80	80
+13	24	redovna	golema	60	100
+15	24	gostuva	mala	90	60
+14	25	premiera	golema	100	200
+12	25	gostuva	kabare	90	280
+11	26	redovna	golema	80	100
+14	26	vonredna	golema	100	200
+13	27	gostuva	golema	80	320
+15	27	gostuva	mala	70	60
+12	28	premiera	kabare	120	100
+14	30			100	200
+14	31			100	200
+14	32			100	200
