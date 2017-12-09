@@ -14,13 +14,13 @@ WHERE U.IMA_ULOGA='glavna' AND B.STATUS='redovna' AND B.SCENA='golema';
     2. Najdi go akterot koj ucestvuval vo najgolem broj na pretstavi
 */
 SELECT V, IMEV
-FROM ULOGI NATURAL JOIN VRABOTENI
+FROM ULOGI NATURAL JOIN VRABOTENI 
 GROUP BY V, IMEV
 HAVING COUNT(*) = (SELECT MAX(COUNT(*))
                     FROM ULOGI
                     GROUP BY V
                     );
-
+                    
 
 /*
     3. Najdi go imeto na akterot so najvisok prosecen honorar
@@ -32,7 +32,7 @@ HAVING AVG(HONORAR) >= ALL(SELECT AVG(HONORAR)
                            FROM ZARABOTUVA
                            GROUP BY V
                           );
-
+                          
 /*
     3. Version 2:
 
@@ -44,13 +44,13 @@ WHERE V IN (SELECT V
             HAVING AVG(HONORAR) >= ALL(SELECT AVG(HONORAR)
                                        FROM ZARABOTUVA
                                        GROUP BY V
-                                      )
+                                      )  
             );
 */
-
-
+            
+            
 /*
-    4. Da se vrati pregled na brojot na razlicni pretstavi sto se igrale posebno
+    4. Da se vrati pregled na brojot na razlicni pretstavi sto se igrale posebno 
        za sekoj grad, sortirani po imeto na gradot.
 */
 
@@ -58,7 +58,7 @@ SELECT GRAD, COUNT(DISTINCT P)
 FROM BILETI NATURAL JOIN TEATRI
 GROUP BY GRAD
 ORDER BY GRAD;
-
+            
 
 /*
     5. Prikazi gi pretstavnicite za koi vkupniot profit od prodazba na bileti
@@ -75,3 +75,45 @@ WHERE P IN (SELECT P
                                           GROUP BY P
                                           )
 );
+
+
+
+/*
+    Dopolnitelno 1: Prikazi gi iminjata na produktite koi ne pripagjaat vo
+    kategorijata parfemi, i nivnata cena e pogolema barem od eden produkt od 
+    kategorijata parfemi.
+*/
+SELECT PRODUCTNAME
+FROM PRODUCTS
+WHERE CATEGORYID NOT IN (SELECT CATEGORYID
+                         FROM CATEGORIES
+                         WHERE CATEGORYNAME='Perfumes'
+                         )
+      AND PRODUCTPRICE > ANY (SELECT CATEGORYID
+                         FROM CATEGORIES
+                         WHERE CATEGORYNAME='Perfumes'
+                         );
+                         
+/*
+    Dopolnitelno 2: Prikazi ja preststavata so najgolema posetenost.
+*/
+SELECT IMEP
+FROM PRETSTAVI
+WHERE P IN (SELECT P
+            FROM BILETI
+            GROUP BY P
+            HAVING SUM(PRODADENI) >= ALL(SELECT SUM(PRODADENI)
+                                         FROM BILETI
+                                         GROUP BY P
+                                         )
+            );
+
+
+
+
+
+
+
+                      
+                                              
+
